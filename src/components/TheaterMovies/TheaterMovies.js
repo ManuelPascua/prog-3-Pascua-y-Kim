@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import PopularCards from '../TheaterCards/TheaterCards'
+import Card from '../Card/Card';
 
 
 class TheaterMovies extends Component{
@@ -7,6 +7,7 @@ class TheaterMovies extends Component{
         super()
         this.state={
             movies:[]
+            
         }
     }
     componentDidMount(){
@@ -23,7 +24,7 @@ class TheaterMovies extends Component{
             <React.Fragment>
                 <section className='cardContainer'>
                     { 
-                        this.state.movies.map( (unPelicula, idx) => <PopularCards key={unPelicula.name+idx} datosPelicula={unPelicula}/>)
+                        this.state.movies.map( (unPelicula, idx) => <Card key={unPelicula.title+idx} datosPelicula={unPelicula}/>)
                     }
                 </section>
             </React.Fragment>

@@ -12,10 +12,10 @@ function Navbar(){
                     <Link to='/Favoritos'>Favorits</Link>
                 </li>
                 <li>
-                    <Link to='/PopularMovies'>Popular</Link>
+                    <Link to='/popular'>Popular</Link>
                 </li>
                 <li>
-                    <Link to='/TheaterMovies'>Theater</Link>
+                    <Link to='/theater'>Theater</Link>
                 </li>
             </ul>
         </nav>

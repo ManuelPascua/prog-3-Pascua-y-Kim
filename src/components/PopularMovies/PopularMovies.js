@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import PopularCards from '../PopularCards/PopularCards'
+import Card from '../Card/Card';
 
 
 class PopularMovies extends Component{
@@ -23,7 +23,7 @@ class PopularMovies extends Component{
             <React.Fragment>
                 <section className='cardContainer'>
                     { 
-                        this.state.movies.map( (unPelicula, idx) => <PopularCards key={unPelicula.title + idx} datosPelicula={unPelicula}/>)
+                        this.state.movies.map( (unPelicula, idx) => <Card key={unPelicula.title + idx} datosPelicula={unPelicula}/>)
                     }
                 </section>
             </React.Fragment>

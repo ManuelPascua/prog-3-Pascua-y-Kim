@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import { Link} from 'react-router-dom'
+import {Link}from 'react-router-dom'
 
-
-class TheaterCards extends Component{
+class Card extends Component{
     constructor(props){
         super(props)
         this.state={ 
@@ -15,8 +14,9 @@ class TheaterCards extends Component{
 
                 <img src={'https://image.tmdb.org/t/p/w342' + this.props.datosPelicula.poster_path} alt=""></img>
                 <h2>{this.props.datosPelicula.title}</h2>   
-                <p>{this.props.datosPelicula.overview}</p> 
-                <Link to='/detalle'>Ver mas</Link>         
+                <p>{this.props.datosPelicula.overview}</p>
+                <Link to={`/detalle/id/${this.props.datosPelicula.id}`}>Ver Mas</Link>
+                        
                 
             </article>
 
@@ -24,4 +24,4 @@ class TheaterCards extends Component{
     }
 
 }
-export default TheaterCards
+export default Card

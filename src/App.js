@@ -7,6 +7,7 @@ import PopularMovies from './screens/PopularMoviesScreen/PopularMoviesScreen'
 import Favoritos from './screens/Favoritos/FavoritosScreen'
 import Home from './screens/Home/Home'
 import TheaterMovies from './screens/TheaterMovies/TheaterMoviesScreen'
+import Detalle from './components/Detalle/Detalle'
 
 
 
@@ -19,11 +20,9 @@ function App() {
           <Route path='/favoritos' component={Favoritos}/>
           <Route path='/popular' component={PopularMovies}/>
           <Route path='/theater' component={TheaterMovies}/>
+          <Route path='/detalle/id/:id' component={Detalle}/>
         </Switch>
-        {/* <h2>Popular Movies</h2>
-        <PopularMovies />
-        <h2>Theater Movies</h2>
-        <TheaterMovies />  */}
+        
         <Footer />
       </React.Fragment>
     
