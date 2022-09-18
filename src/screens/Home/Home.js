@@ -18,12 +18,12 @@ class Home extends Component{
     guardarCambios(event){ 
         this.setState({input: event.target.value}, () => { 
             console.log(this.state.input); 
-            this.busqueda() 
+            this.buscar() 
         });
     
     }
     
-        busqueda () {
+        buscar () {
         if(this.state.input !== ''){ 
                 fetch(`https://api.themoviedb.org/3/search/movie?api_key=a21964bccbb974a7f0bb1668b14f27bd&language=en-US&page=1&query=${this.state.input}`)
                 .then(res => res.json())
