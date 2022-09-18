@@ -62,7 +62,7 @@ class Home extends Component{
                         </div> 
                         </form>
                         
-                        {this.state.data===[] ? <h3>Cargando...</h3>:
+                        {this.state.data===[] ? <h3>Cargando</h3>:
                         this.state.data.map((unaPelicula,idx) => <Card key={idx} datosPelicula = {unaPelicula}/>)
                     
                     
