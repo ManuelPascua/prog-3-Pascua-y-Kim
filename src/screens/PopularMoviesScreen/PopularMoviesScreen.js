@@ -6,7 +6,8 @@ class Popular extends Component{
     constructor(props){
         super(props)
         this.state={
-            movies:[]
+            movies:[],
+            value:''
            
             
         }
@@ -36,16 +37,16 @@ class Popular extends Component{
             
 
             <React.Fragment>
-                <button onClick={()=>this.traerMas()}> Traer más </button>
+                
+                
                 <section className='cardContainer'>
                  { 
                     this.state.movies.map( (unPelicula, idx) => <Card key={unPelicula.title + idx} datosPelicula={unPelicula}/>)
                  }
                 </section>
-        </React.Fragment>
-
-            
-            
+                <button onClick={()=>this.traerMas()}> Traer más </button>
+                
+            </React.Fragment>        
             
         )
     }
