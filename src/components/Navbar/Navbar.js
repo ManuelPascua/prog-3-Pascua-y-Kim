@@ -5,6 +5,7 @@ function Navbar(){
     return(
         <nav>
             <ul className= "main-nav">
+                <image></image>
                 <li>
                     <Link to='/'>Home</Link>
                 </li>

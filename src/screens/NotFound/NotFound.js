@@ -4,8 +4,11 @@ function NotFound(){
 
     return(
         <React.Fragment>
-            <h2>404</h2>
-            <p>Acá no está lo que buscás.</p>
+           <section>
+            <div className='Error'>
+                <h2>Error</h2>
+            </div>
+        </section>
         </React.Fragment>
     )
 }
