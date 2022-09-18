@@ -48,8 +48,9 @@ class Home extends Component{
                             <input onChange={(event)=> this.guardarCambios(event)} value={this.state.input} placeholder="Search" type="search" className="input"/>
                         </div> 
                         </form>
-                        
+                        <h2>Popular Movies</h2>
                         <PopularMovies/>
+                        <h2>Theater Movies</h2>
                         <TheaterMovies/>
                     
                      </React.Fragment>
