@@ -1,0 +1,16 @@
+.movie{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 35%; 
+}
+.name{
+    color: #777;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 24%;
+    border-radius: 40px;
+ 
+}

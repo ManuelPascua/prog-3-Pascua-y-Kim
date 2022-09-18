@@ -9,7 +9,7 @@ function Navbar(){
                     <Link to='/'>Home</Link>
                 </li>
                 <li>
-                    <Link to='/Favoritos'>Favorits</Link>
+                    <Link to='/Favoritos'>Favoritos</Link>
                 </li>
                 <li>
                     <Link to='/popular'>Popular</Link>

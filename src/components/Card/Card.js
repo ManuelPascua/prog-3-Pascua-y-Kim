@@ -20,6 +20,8 @@ class Card extends Component{
                 
             </article>
 
+            
+
         )
     }
 

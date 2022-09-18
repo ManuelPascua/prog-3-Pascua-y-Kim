@@ -1,4 +1,5 @@
 import React from'react'
+import './detalle.css'
 import { Component } from 'react'
 
 class Detalle extends Component{
@@ -22,8 +23,8 @@ class Detalle extends Component{
     render() {
         return(
             <>
-             <img src={'https://image.tmdb.org/t/p/w342' + this.state.movie.poster_path} alt=""></img>
-                <h2>{this.state.movie.title}</h2>   
+                <h2 className='name'>{this.state.movie.title}</h2> 
+                <img className='movie' src={'https://image.tmdb.org/t/p/w342' + this.state.movie.poster_path} alt=""></img>
                 <p>{this.state.movie.overview}</p>
             </>
         )
