@@ -8,7 +8,8 @@ class Theaterscreen extends Component{
     constructor(props){
         super(props)
         this.state={
-            movies:[]
+            movies:[],
+            masUno:1
            
             
         }
@@ -24,10 +25,11 @@ class Theaterscreen extends Component{
     }
 
     traerMas(){
-        fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=a21964bccbb974a7f0bb1668b14f27bd&language=en-US&page=1')
+        fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=a21964bccbb974a7f0bb1668b14f27bd&language=en-US&page=${this.state.masUno}`)
             .then( res => res.json())
             .then( data => this.setState({
-                movies: data.results.concat(this.state.movies) ,masUno:this.masUno +1 ,
+                movies: data.results.concat(this.state.movies) ,
+                masUno:this.masUno +1 ,
                 
             }))
             .catch()
@@ -39,13 +41,13 @@ class Theaterscreen extends Component{
             
 
             <React.Fragment>
-                
+                <button onClick={()=>this.traerMas()}> Traer más </button>
                 <section className='cardContainer'>
                  { 
                     this.state.movies.map( (unPelicula, idx) => <Card key={unPelicula.title + idx} datosPelicula={unPelicula}/>)
                  }
                 </section>
-                <button onClick={()=>this.traerMas()}> Traer más </button>
+                
         </React.Fragment>
 
             
