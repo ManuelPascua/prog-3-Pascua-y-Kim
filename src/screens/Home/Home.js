@@ -33,7 +33,7 @@ class Home extends Component{
                 .then(data => {
                 this.setState({data: data.results}, () => console.log(data.results))
                 })
-            .catch(e => console.log(e))
+            .catch(error => console.log(error))
             }
         }
     
@@ -42,15 +42,15 @@ class Home extends Component{
                 this.state.input.length === 0 ?
                 
                     <React.Fragment> 
-                        <h2>Home</h2>
+                        <h2 className='home'>Home</h2> 
                         <form onSubmit={(event)=>this.evitarSubmit(event)}>
-                        <div className="group">
-                            
-                            <input onChange={(event)=> this.guardarCambios(event)} value={this.state.input} placeholder="Search" type="search" className="input"/>
-                        </div> 
+                            <div className="group">
+                                <input onChange={(event)=> this.guardarCambios(event)} value={this.state.input} placeholder="Busca una pelicula" type="search" className="input"/>
+                            </div> 
                         </form>
+                        
                         <li className='popular'>
-                            <Link to='/popular'>Peliculas más populares</Link>
+                            <Link to='/popular'>Peliculas populares</Link>
                         </li>
                         <PopularMovies/>
                         <li className='cartelera' >
@@ -62,20 +62,18 @@ class Home extends Component{
     
                 :
                     <React.Fragment> 
-                        <h2>Resultados de Búsqueda</h2>
-                        <form onSubmit={(event)=>this.evitarSubmit(event)}>
+                        <h2 className='search'>Resultados de Búsqueda</h2>
                         <div className="group">
-                           
+                        <form onSubmit={(event)=>this.evitarSubmit(event)}>
                             <input onChange={(event)=> this.guardarCambios(event)} value={this.state.input} placeholder="Search" type="search" className="input"/>
-                        </div> 
                         </form>
+                        </div> 
                         
-                        {this.state.data===[] ? <h3>Cargando</h3>:
-                        this.state.data.map((unaPelicula,idx) => <Card key={idx} datosPelicula = {unaPelicula}/>)
-                    
-                    
-                    
-                    }
+                        <section>
+                        {this.state.data.length=== 0 ? <p>Cargando...</p>:
+                        this.state.data.map((unaPelicula,idx) => <Card key={unaPelicula.name + idx} datosPelicula = {unaPelicula}/>)
+                        }
+                        </section>
                     
                      </React.Fragment>                       
             )

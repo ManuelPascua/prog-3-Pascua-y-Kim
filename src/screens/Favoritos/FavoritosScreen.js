@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Card from '../../components/Card/Card'
+import './favoritos.css'
 
 class Favoritos extends Component{
     constructor(){
@@ -31,6 +32,7 @@ class Favoritos extends Component{
             
         }
         
+        
     }
    
     
@@ -38,7 +40,7 @@ class Favoritos extends Component{
         return(
             <React.Fragment>
                 
-                <h2>Tus favoritos</h2>
+                <h2 className='favoritos'>Tus favoritos</h2>
                  <section className='card-container'>
                     { 
                         this.state.peliculasFavs.map( (unPelicula, idx) => <Card key={unPelicula.titel+idx} datosPelicula={unPelicula}/>)

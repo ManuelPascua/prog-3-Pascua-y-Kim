@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Card from '../../components/Card/Card'
-
+import './theater.css'
 
 
 class Theaterscreen extends Component{
@@ -41,7 +41,8 @@ class Theaterscreen extends Component{
             
 
             <React.Fragment>
-                <button onClick={()=>this.traerMas()}> Traer más </button>
+                <h2 className='theater'>Peliculas en cartelera</h2>
+                <button className='botonTraer' onClick={()=>this.traerMas()}> Traer más </button>
                 <section className='cardContainer'>
                  { 
                     this.state.movies.map( (unPelicula, idx) => <Card key={unPelicula.title + idx} datosPelicula={unPelicula}/>)

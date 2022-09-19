@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Card from '../Card/Card';
-import './popularMovies.css'
 
 class PopularMovies extends Component{
     constructor(){
@@ -20,7 +19,7 @@ class PopularMovies extends Component{
     }
     render(){
         return(
-            <React.Fragment>
+            <React.Fragment>              
                 <section className='cardContainer'>
                     { 
                         this.state.movies.map( (unPelicula, idx) => <Card key={unPelicula.title + idx} datosPelicula={unPelicula}/>)

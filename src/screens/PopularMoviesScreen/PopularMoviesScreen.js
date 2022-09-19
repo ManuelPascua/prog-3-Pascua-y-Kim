@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Card from'../../components/Card/Card'
+import './popular.css'
 
 
 class Popular extends Component{
@@ -21,7 +22,7 @@ class Popular extends Component{
             }))
             .catch()
     }
-
+   
     traerMas(){
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=a21964bccbb974a7f0bb1668b14f27bd&language=en-US&page=${this.state.masUno}`)
             .then( res => res.json())
@@ -38,13 +39,14 @@ class Popular extends Component{
             
 
             <React.Fragment>
-                
-                <button onClick={()=>this.traerMas()}> Traer más </button>
+                <h2 className='peliculasPop'>Peliculas Populares</h2>
+                <button className='botonTraer' onClick={()=>this.traerMas()}> Traer más </button>
                 <section className='cardContainer'>
                  { 
                     this.state.movies.map( (unPelicula, idx) => <Card key={unPelicula.title + idx} datosPelicula={unPelicula}/>)
                  }
                 </section>
+                
                 
                 
             </React.Fragment>        

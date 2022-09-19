@@ -1,0 +1,18 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 35%;
+    padding-right: 30%;
+}
+.peliculasPop{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.botonTraer{
+    margin-left: 30px;
+}
