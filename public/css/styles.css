@@ -8,7 +8,7 @@ li {
     list-style-type:none;
 }
 li a {
-    color: #fff;
+    color: black;
 }
 a {
     text-decoration: none;
@@ -31,7 +31,6 @@ nav{
     justify-content: space-between;
     padding-left: 10px;
     background-color: rgb(244, 151, 22);
-    color: #fff
 }
 
 nav ul {
@@ -69,33 +68,6 @@ h1,
 main {
     padding: 0 30px;
 }
-
-/*Top data*/
-.top-data {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: #666;
-}.data-detail {
-    width: 32%;
-    border-radius: 4px;
-    background-color: #fff;
-    padding: 10px 30px;
-    text-transform: capitalize;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.data-detail p {
-    margin-top:0;
-}
-.data-detail h4 {
-    margin-bottom: 0;
-}
-
 
 /* footer */
 footer {

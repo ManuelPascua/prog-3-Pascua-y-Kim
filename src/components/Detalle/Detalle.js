@@ -25,9 +25,12 @@ class Detalle extends Component{
             <>
                 <h2 className='name'>{this.state.movie.title}</h2> 
                 <img className='movie' src={'https://image.tmdb.org/t/p/w342' + this.state.movie.poster_path} alt=""></img>
-                <p>{this.state.movie.overview}</p>
+                <p className='resumen'>Resumen: {this.state.movie.overview}</p>
+                <h2 className='rating'>Rating: {this.state.movie.vote_average}</h2>
+                <h2 className='estreno'>Fecha de estreno: {this.state.movie.release_date}</h2>
+            
             </>
         )
-    }     
+    }    
 }
 export default Detalle

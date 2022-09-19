@@ -27,15 +27,10 @@ class Favoritos extends Component{
                     .then(data => this.setState({ peliculasFavs: this.state.peliculasFavs.concat(data) }))
                     .catch(e => console.log(e))
                     
-            })
-
-            
-        }
-        
-        
+            })  
+        }    
     }
    
-    
     render(){
         return(
             <React.Fragment>

@@ -4,13 +4,26 @@
     flex-direction: row;
     justify-content: space-between;
     margin-left: 35%; 
+
 }
 .name{
-    color: #777;
-    font-size: 20px;
-    padding: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 30px;
     margin-bottom: 20px;
     width: 24%;
     border-radius: 40px;
- 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.resumen{
+    padding-left: 50px;
+}
+.estreno{
+    font-size: medium;
+    padding-left: 50px;
+}
+.rating{
+    font-size: medium;
+    padding-left: 50px;
 }

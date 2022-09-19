@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link}from 'react-router-dom'
+import './card.css'
 
 class Card extends Component{
     constructor(props){
@@ -61,13 +62,11 @@ class Card extends Component{
     render(){
         return(
             <article className='movies-card'>
-                 <p onClick={()=>this.agregarYQuitarDeFavoritos(this.props.datosPelicula.id)}>{this.state.favsMessage}</p>
+                <p onClick={()=>this.agregarYQuitarDeFavoritos(this.props.datosPelicula.id)}>{this.state.favsMessage}</p>
                 <img src={`https://image.tmdb.org/t/p/w342${this.props.datosPelicula.poster_path}`} alt=""></img>
-                <h2>{this.props.datosPelicula.title}</h2>   
-                <p>{this.props.datosPelicula.overview}</p>
+                <h2 className='titulo'>{this.props.datosPelicula.title}</h2>   
+                <p className='resumen'>Resumen: {this.props.datosPelicula.overview}</p>
                 <Link to={`/detalle/id/${this.props.datosPelicula.id}`}>Ver Mas</Link>
-                        
-                
             </article>
 
             

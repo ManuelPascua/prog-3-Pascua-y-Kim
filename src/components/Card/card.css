@@ -1,12 +1,13 @@
 .movies-card{
-    color: rgb(62, 190, 2);
-    font-size: 15px;
+    color: black;
+    font-size: medium;
     padding: 10px;
     margin-bottom: 20px;
     width: 24%;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+
 }
 .movies-card img{
     width: 100%;
@@ -18,13 +19,10 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 }
 .movies-card p {
     margin: 3px 0;
+    font-size: medium;
 }
 .movies-card h2 {
     margin: 2px 0;
-}
-.props.datosPelicula.title{
-    color: blue;
-    text-align: right;
 }
 .link:hover{
     text-decoration: underline;
