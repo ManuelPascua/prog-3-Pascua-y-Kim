@@ -2,3 +2,21 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 30px;
 }
+
+.popular{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.cartelera{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: underline;
+}

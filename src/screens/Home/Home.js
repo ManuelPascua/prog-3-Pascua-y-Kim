@@ -3,6 +3,7 @@ import PopularMovies from "../../components/PopularMovies/PopularMovies"
 import TheaterMovies from '../../components/TheaterMovies/TheaterMovies'
 import './home.css'
 import Card from '../../components/Card/Card'
+import {Link}from 'react-router-dom'
 
 
 class Home extends Component{ 
@@ -48,9 +49,13 @@ class Home extends Component{
                             <input onChange={(event)=> this.guardarCambios(event)} value={this.state.input} placeholder="Search" type="search" className="input"/>
                         </div> 
                         </form>
-                        <h2>Popular Movies</h2>
+                        <li className='popular'>
+                            <Link to='/popular'>Peliculas más populares</Link>
+                        </li>
                         <PopularMovies/>
-                        <h2>Theater Movies</h2>
+                        <li className='cartelera' >
+                            <Link to='/theater'>Cartelera</Link>
+                        </li>
                         <TheaterMovies/>
                     
                      </React.Fragment>
