@@ -6,7 +6,7 @@ class Favoritos extends Component{
     constructor(){
         super();
         this.state = {
-            peliculasFavs:[] //Es array de objetos literales con cada personaje.
+            peliculasFavs:[] 
         }
     }
 
@@ -15,12 +15,11 @@ class Favoritos extends Component{
         let recuperoStorage = localStorage.getItem('favoritos')
 
         if(recuperoStorage !== null){
-            favoritos = JSON.parse(recuperoStorage) //es un array de ids
+            favoritos = JSON.parse(recuperoStorage) /
             
 
-            //recorrer el array y pedirla al endpoint por los datos de cada personaje.
             favoritos.forEach(unIdFavorito => {
-                //pedir por cada id los datos del personaje
+                
                 let url = `https://api.themoviedb.org/3/movie/${unIdFavorito}?api_key=a21964bccbb974a7f0bb1668b14f27bd&language=en-US&page=1`
                 fetch(url)
                     .then(res => res.json())
